@@ -141,6 +141,22 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+    <ResourceCompile Include="Resource1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="temperature_thermometer_cold_warm_hot_icon_194240.ico" />
+    <Image Include="wood.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cursor.cur" />
+    <None Include="StarCraft.ani" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

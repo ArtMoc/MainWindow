@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <Windows.h>
 #include <stdio.h>
+#include "resource.h"
 
 
 CONST CHAR g_szCLASS_NAME[] = "MyWindowClass";
@@ -18,8 +19,10 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, IN
 	wc.cbClsExtra = 0;
 	wc.cbWndExtra = 0;
 	wc.hInstance = hInstance;
-	wc.hIcon = LoadIcon(NULL, IDI_APPLICATION);
-	wc.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
+	//wc.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON_TERM));
+	//wc.hIconSm = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON_WOOD));
+	wc.hIcon = (HICON)LoadImage(hInstance, "storm.ico", IMAGE_ICON, 0, 0, LR_DEFAULTSIZE | LR_LOADFROMFILE);
+	wc.hIconSm = (HICON)LoadImage(hInstance, "flower.ico", IMAGE_ICON, 0, 0, LR_DEFAULTSIZE | LR_LOADFROMFILE);
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
 	wc.lpszClassName = g_szCLASS_NAME;
