@@ -22,8 +22,8 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInst, LPSTR lpCmdLine, IN
 	wc.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 	wc.hCursor = LoadCursor(NULL, IDC_ARROW);
 	wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-	wc.lpszMenuName = g_szCLASS_NAME;
-	wc.lpszClassName = NULL;
+	wc.lpszClassName = g_szCLASS_NAME;
+	wc.lpszMenuName = NULL;
 	if (!RegisterClassEx(&wc))
 	{
 		MessageBox(NULL, "Class registration failed!", "Error", MB_OK | MB_ICONERROR);
